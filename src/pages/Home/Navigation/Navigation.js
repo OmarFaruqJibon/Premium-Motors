@@ -13,11 +13,11 @@ const Navigation = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div>
-                        <Link to="/"><img className="me-md-5" src={'https://i.postimg.cc/FRL4QRST/logo-1.png'} alt="" /></Link>
+                    <div className="text-md-start">
+                        <Link to="/"><img className=" w-50" src={'https://i.postimg.cc/RZJ337xN/logo.png'} alt="" /></Link>
                         
                     </div>
-                    <div className="collapse navbar-collapse" id="navbarText">
+                    <div className="collapse navbar-collapse text-md-start" id="navbarText">
                         <div className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <Link className="nav-item my-nav" to="/home">Home</Link>
                                 <Link className="nav-item my-nav" to="/cars">Cars</Link>

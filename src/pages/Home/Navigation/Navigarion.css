@@ -1,9 +1,9 @@
 .nav-bg{
-    background-color: #ef6c00;
-    padding: 15px;
+    background-color: #151515;
+    padding: 10px;
 }
 .my-nav{
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .my-nav{
@@ -11,25 +11,23 @@
     text-decoration: none;
 }
 .my-nav:hover{
-    color: #1e78c1;
+    color: #db2d2e;
 }
 
 .nav-btn{
-    background: black;
+    background: #db2d2e;
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 4px 27px;
+    padding: 1px 15px;
     margin-left: 10px;
 }
 .nav-btn:hover{
-    background-color:#fff;
-    border: 1px solid black;
-    color: #ef6c00
+    background-color:#e61414;
 }
 
 .signIn-btn{
-    background: #ef6c00;
+    background: #db2d2e;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -37,7 +35,5 @@
     margin-left: 10px;
 }
 .signIn-btn:hover{
-    background-color:#fff;
-    border: 1px solid #ef6c00;
-    color: black;
+    background-color:#db2d2e;
 }
