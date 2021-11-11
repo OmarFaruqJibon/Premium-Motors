@@ -1,0 +1,14 @@
+.info-form input{
+    background-color: #bdbdbdda;
+    color: white;
+    padding: 10px;
+    /* border: 1px solid #212529da; */
+    border-radius: 5px;
+}
+
+.book-btn:hover{
+    background-color:#fff;
+    background: #ef6c00;
+    border: 1px solid #ef6c00;
+    color: black;
+}

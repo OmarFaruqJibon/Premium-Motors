@@ -1,0 +1,43 @@
+.nav-bg{
+    background-color: #ef6c00;
+    padding: 15px;
+}
+.my-nav{
+    padding-right: 40px;
+}
+
+.my-nav{
+    color: #fff;
+    text-decoration: none;
+}
+.my-nav:hover{
+    color: #1e78c1;
+}
+
+.nav-btn{
+    background: black;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px 27px;
+    margin-left: 10px;
+}
+.nav-btn:hover{
+    background-color:#fff;
+    border: 1px solid black;
+    color: #ef6c00
+}
+
+.signIn-btn{
+    background: #ef6c00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px 27px;
+    margin-left: 10px;
+}
+.signIn-btn:hover{
+    background-color:#fff;
+    border: 1px solid #ef6c00;
+    color: black;
+}

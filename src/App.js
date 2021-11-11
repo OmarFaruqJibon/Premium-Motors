@@ -1,23 +1,76 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route,  Switch} from 'react-router-dom';
 import './App.css';
+import CarDetails from './pages/Cars/CarDetails/CarDetails';
+import Cars from './pages/Cars/Cars';
+import AuthProvider from './pages/context/AuthProvider/AuthProvider';
+import AddCar from './pages/Dashboard/Admin/AddCar/AddCar';
+import AllOrders from './pages/Dashboard/Admin/AllOrders/AllOrders';
+import MainDashboard from './pages/Dashboard/MainDashboard/MainDashboard';
+import MyOrders from './pages/Dashboard/NormalUser/MyOrders/MyOrders';
+import Home from './pages/Home/Home/Home';
+import Navigation from './pages/Home/Navigation/Navigation';
+import Login from './pages/Login/Login/Login';
+import Register from './pages/Login/Register/Register';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+      <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/cars">
+          <Navigation></Navigation>
+          <Cars></Cars>
+        </Route>
+        <Route path="/dashboard">
+        <Navigation></Navigation>
+          <MainDashboard></MainDashboard>
+        </Route>
+        <Route path="/carDetails/:carId">
+        <Navigation></Navigation>
+          <CarDetails></CarDetails>
+        </Route>
+        <Route path="/login">
+        <Navigation></Navigation>
+          <Login></Login>
+        </Route>
+        <Route path="/register">
+        <Navigation></Navigation>
+          <Register></Register>
+        </Route>
+
+
+
+
+
+
+
+
+
+
+
+        <Route path="/addCar">
+        <Navigation></Navigation>
+          <AddCar></AddCar>
+        </Route>
+        <Route path="/AllOrders">
+        <Navigation></Navigation>
+          <AllOrders></AllOrders>
+        </Route>
+        <Route path="/myOrders">
+        <Navigation></Navigation>
+          <MyOrders></MyOrders>
+        </Route>
+        
+      </Switch>
+    </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
