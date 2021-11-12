@@ -22,6 +22,7 @@ const Navigation = () => {
                                 <Link className="nav-item my-nav" to="/home">Home</Link>
                                 <Link className="nav-item my-nav" to="/cars">Cars</Link>
                                 <Link className="nav-item my-nav" to="/dashboard">Dashboard</Link>
+                                <Link className="nav-item my-nav" to="/sidebar">Sidebar</Link>
                                 {/* <Link className="nav-item my-nav" to="/about">About</Link>
                                 <Link className="nav-item my-nav" to="/contact">Contact</Link> */}
                         </div>

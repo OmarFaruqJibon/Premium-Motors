@@ -7,7 +7,10 @@ import AddCar from './pages/Dashboard/Admin/AddCar/AddCar';
 import AllOrders from './pages/Dashboard/Admin/AllOrders/AllOrders';
 import MakeAdmin from './pages/Dashboard/Admin/MakeAdmin/MakeAdmin';
 import MainDashboard from './pages/Dashboard/MainDashboard/MainDashboard';
+import CreateReview from './pages/Dashboard/NormalUser/CreateReview/CreateReview';
 import MyOrders from './pages/Dashboard/NormalUser/MyOrders/MyOrders';
+import Pay from './pages/Dashboard/NormalUser/Pay/Pay';
+import Sidebar from './pages/Dashboard/Sidebar/Sidebar';
 import Home from './pages/Home/Home/Home';
 import Navigation from './pages/Home/Navigation/Navigation';
 import Login from './pages/Login/Login/Login';
@@ -73,6 +76,18 @@ function App() {
         <Navigation></Navigation>
           <MakeAdmin></MakeAdmin>
         </Route>
+        <Route path="/pay">
+        <Navigation></Navigation>
+          <Pay></Pay>
+        </Route>
+        <Route path="/createReview">
+        <Navigation></Navigation>
+          <CreateReview></CreateReview>
+        </Route>
+        <PrivateRoute path="/sidebar">
+        <Navigation></Navigation>
+          <Sidebar></Sidebar>
+        </PrivateRoute>
         
       </Switch>
     </BrowserRouter>
