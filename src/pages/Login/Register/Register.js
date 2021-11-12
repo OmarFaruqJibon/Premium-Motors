@@ -37,9 +37,22 @@ const Register = () => {
                        <input onBlur={handleLogInField} className="w-75 mt-2" type="email" name="email" placeholder="Email" />
                        <input onBlur={handleLogInField} className="w-75 mt-2" type="password" name="password" placeholder="Password" />
                        <input onBlur={handleLogInField} className="w-75 mt-2" type="password" name="password2" placeholder="Confirm Password" />
-                       <button type="submit" className="w-75 mt-4">Login</button>
+                       <button type="submit" className="w-75 mt-4">Register</button>
                    </form>
-                   <p>Already Registerd? <Link to="/login">Register</Link> </p>
+                   <p>Already Registerd? <Link to="/login">Login</Link> </p>
+                   {
+                        user.email && 
+                            <div class="alert alert-success" role="alert">
+                               Registration successfully!
+                            </div>
+                    }
+
+                    {
+                        authError && 
+                        <div class="alert alert-danger" role="alert">
+                             Registration failed!
+                            </div>
+                    }
                </div>
                <div className="col-md-6 col-12">
                     <img className="w-100 mt-5" src={'https://i.postimg.cc/hvS3Psfy/signin-11.png'} alt="" />

@@ -8,7 +8,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    // const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(false);
     // const [token, setToken] = useState('');
 
     const auth = getAuth();
@@ -89,12 +89,11 @@ const useFirebase = () => {
 
 
     //   make admin
-
-    //   useEffect(() => {
-    //     fetch(`http://localhost:5000/users/${user.email}`)
-    //     .then(res=>res.json())
-    //     .then(data=>setAdmin(data.admin))
-    //   },[user.email]);
+      useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res=>res.json())
+        .then(data=>setAdmin(data.admin))
+      },[user.email]);
 
 
     const logOut = () => {
@@ -123,8 +122,8 @@ const useFirebase = () => {
         logOut,
         authError,
         googleLogin,
-        isLoading
-        // admin,
+        isLoading,
+        admin
         // token
     }
 };

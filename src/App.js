@@ -5,11 +5,13 @@ import Cars from './pages/Cars/Cars';
 import AuthProvider from './pages/context/AuthProvider/AuthProvider';
 import AddCar from './pages/Dashboard/Admin/AddCar/AddCar';
 import AllOrders from './pages/Dashboard/Admin/AllOrders/AllOrders';
+import MakeAdmin from './pages/Dashboard/Admin/MakeAdmin/MakeAdmin';
 import MainDashboard from './pages/Dashboard/MainDashboard/MainDashboard';
 import MyOrders from './pages/Dashboard/NormalUser/MyOrders/MyOrders';
 import Home from './pages/Home/Home/Home';
 import Navigation from './pages/Home/Navigation/Navigation';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Login/Register/Register';
 
 function App() {
@@ -28,10 +30,10 @@ function App() {
           <Navigation></Navigation>
           <Cars></Cars>
         </Route>
-        <Route path="/dashboard">
+        <PrivateRoute path="/dashboard">
         <Navigation></Navigation>
           <MainDashboard></MainDashboard>
-        </Route>
+        </PrivateRoute>
         <Route path="/carDetails/:carId">
         <Navigation></Navigation>
           <CarDetails></CarDetails>
@@ -66,6 +68,10 @@ function App() {
         <Route path="/myOrders">
         <Navigation></Navigation>
           <MyOrders></MyOrders>
+        </Route>
+        <Route path="/makeAdmin">
+        <Navigation></Navigation>
+          <MakeAdmin></MakeAdmin>
         </Route>
         
       </Switch>
