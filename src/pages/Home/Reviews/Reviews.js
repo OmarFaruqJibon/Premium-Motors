@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Reviews.css';
+import Rating from 'react-rating';
 
 const Reviews = () => {
+    const [review, setReview] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+        .then(res => res.json())
+        .then(data => setReview(data));
+    },[]);
+    console.log(review)
     return (
         <section class="home-testimonial">
     <div class="container-fluid">
@@ -18,37 +26,31 @@ const Reviews = () => {
             <div class="container testimonial-inner">
                 <div class="row d-flex justify-content-center">
                     
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
+                    {review.map(rev => <div class="col-md-4 style-3">
+                        
+                        <div class="tour-item">
                             <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""/></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
+                                <div class="tour-text color-grey-3 text-center">{rev.message}</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src={rev.img} alt=""/></div>
+                                <div class="link-name d-flex justify-content-center">{rev.name}</div>
+                                <Rating className="star-icon"
+                                        initialRating={rev.rating}
+                                        readonly
+                                        emptySymbol="far fa-star"
+                                        fullSymbol="fas fa-star"
+                                    />
+                                <div class="d-flex justify-content-center align-items-center">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
+                    ) }
 
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
-                            <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 style-3">
-                        <div class="tour-item ">
-                            <div class="tour-desc bg-white">
-                                <div class="tour-text color-grey-3 text-center">“At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.”</div>
-                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/></div>
-                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
-                                <div class="link-position d-flex justify-content-center">Student</div>
-                            </div>
-                        </div>
-                    </div>
+                    
+
+
+
                 </div>
                 </div>
         </section>

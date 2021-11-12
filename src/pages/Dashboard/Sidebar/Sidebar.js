@@ -18,6 +18,7 @@ import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import Pay from '../NormalUser/Pay/Pay';
 import MyOrders from '../NormalUser/MyOrders/MyOrders';
 import CreateReview from '../NormalUser/CreateReview/CreateReview';
+import ManageCars from '../Admin/ManageCars/ManageCars';
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -31,8 +32,9 @@ const Sidebar = () => {
             <IconContext.Provider value={{ color: '#fff' }}>
                 <div className='sidebarWrap'>
                     <Link to='#' className='menu-bars'>
-                    <FaIcons.FaBars onClick={showSidebar} />
+                        <FaIcons.FaBars onClick={showSidebar} />
                     </Link>
+                    <h4 className="ms-3 mt-3 text-white">Dashboard</h4>
                 </div>
 
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
@@ -42,22 +44,13 @@ const Sidebar = () => {
                             <AiIcons.AiOutlineClose />
                             </Link>
                         </li>
-                        {/* {SidebarData.map((item, index) => {
-                            return (
-                            <li key={index} className={item.cName}>
-                                <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                                </Link>
-                            </li>
-                            );
-                        })} */}
 
                         {admin && <div>
                             
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/addCar`}><AiIcons.AiFillCarryOut className="me-2 fs-4" /> Add Car</Link> <br />
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/allOrders`}><AiIcons.AiFillShopping className="me-2 fs-4" />All Orders</Link> <br />
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/makeAdmin`}><AiIcons.AiFillContacts className="me-2 fs-4" />Make Admin</Link> <br />
+                            <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/manageCars`}><AiIcons.AiFillContacts className="me-2 fs-4" />Manage Cars</Link> <br />
                         </div>}
 
                         {!admin && <div>
@@ -97,6 +90,9 @@ const Sidebar = () => {
                     </Route>
                     <Route path={`${path}/createReview`}>
                         <CreateReview></CreateReview>
+                    </Route>
+                    <Route path={`${path}/manageCars`}>
+                        <ManageCars></ManageCars>
                     </Route>
                 </Switch>
         </div>

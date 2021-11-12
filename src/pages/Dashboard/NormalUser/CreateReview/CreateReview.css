@@ -1,0 +1,22 @@
+.input-form input{
+    border: none;
+    border-bottom: 1px solid #151515d7;
+}
+.input-form textarea{
+
+    border: none;
+    border-bottom: 1px solid #151515d7;
+}
+.review-btn{
+
+    background: #db2d2e;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 2px 15px;
+    margin-left: 10px;
+}
+.review-btn:hover{
+    background-color:#e61414;
+    color: #fff;
+}

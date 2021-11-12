@@ -1,6 +1,7 @@
 import React from 'react';
 import Cars from '../../Cars/Cars';
 import Banner from '../Banner/Banner';
+import HomeCars from '../HomeCars/HomeCars';
 import Navigation from '../Navigation/Navigation';
 import Reviews from '../Reviews/Reviews';
 
@@ -9,7 +10,8 @@ const Home = () => {
         <div>
             <Navigation></Navigation>
             <Banner></Banner>
-            <Cars></Cars>
+            {/* <Cars></Cars> */}
+            <HomeCars></HomeCars>
             <Reviews></Reviews>
         </div>
     );
