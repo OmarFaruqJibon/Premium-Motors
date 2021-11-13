@@ -1,23 +1,19 @@
 .home-testimonial {
-    background-color: #231834;
-    height: 380px
+    background-color: #1e152a;
 }
 
 .home-testimonial-bottom {
-    background-color: #f8f8f8;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 20px;
-    margin-bottom: 0px;
-    position: relative;
-    height: 130px;
-    top: 190px
 }
 
-.home-testimonial h3 {
-    color: rgb(202, 0, 0);
-    font-size: 14px;
-    font-weight: 500;
+.home-testimonial p {
+    color: white;
+    font-size: 12px;
     text-transform: uppercase
+}
+.home-testimonial h1 {
+    color: white;
 }
 
 .home-testimonial h2 {
@@ -26,19 +22,11 @@
     font-weight: 700
 }
 
-.testimonial-inner {
-    position: relative;
-    top: -174px
-}
-
-.testimonial-pos {
-    position: relative;
-    top: 24px
-}
-
 .testimonial-inner .tour-desc {
     border-radius: 5px;
-    padding: 40px
+    padding: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .color-grey-3 {

@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.def-clr{
+  color: #db2d2e;
+}
 
 .App-logo {
   height: 40vmin;

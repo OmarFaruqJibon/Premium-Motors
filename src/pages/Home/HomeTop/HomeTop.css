@@ -1,0 +1,17 @@
+.home-top-body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.single-home-top-body{
+    padding: 10px;
+}
+.home-top-body img{
+    width: 50px;
+    margin-bottom: 15px;
+}
+.home-top-body small{
+    color: rgba(0, 0, 0, 0.589);
+}
+.home-top-car{
+    margin-top: -75px;
+}
