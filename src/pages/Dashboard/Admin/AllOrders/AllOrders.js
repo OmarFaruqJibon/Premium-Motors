@@ -5,7 +5,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://stark-sierra-80617.herokuapp.com/orders')
         .then(res=> res.json())
         .then(data=>setOrders(data));
     },[]);
@@ -14,7 +14,7 @@ const AllOrders = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://stark-sierra-80617.herokuapp.com/orders/${id}`;
         fetch((url),{
             method: 'DELETE',
         })

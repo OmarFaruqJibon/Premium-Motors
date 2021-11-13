@@ -11,7 +11,7 @@ const CarDetails = () => {
     const { register,reset, handleSubmit, formState: { errors } } = useForm();
 
 
-    const url = `http://localhost:5000/carDetails/${carId}`;
+    const url = `https://stark-sierra-80617.herokuapp.com/carDetails/${carId}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -24,7 +24,7 @@ const CarDetails = () => {
     
     const onSubmit = data =>{
         data.bookingID = carId;
-        fetch('http://localhost:5000/orders',{
+        fetch('https://stark-sierra-80617.herokuapp.com/orders',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

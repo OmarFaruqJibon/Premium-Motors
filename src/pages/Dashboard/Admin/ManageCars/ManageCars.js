@@ -6,7 +6,7 @@ const ManageCars = () => {
     const [car, setCar] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://stark-sierra-80617.herokuapp.com/cars')
         .then(res => res.json())
         .then(data=>setCar(data));
     },[]);
@@ -14,7 +14,7 @@ const ManageCars = () => {
     const handleDeleteBooking = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
             if(proceed){
-                const url = `http://localhost:5000/cars/${id}`;
+                const url = `https://stark-sierra-80617.herokuapp.com/cars/${id}`;
             fetch((url),{
                 method: 'DELETE',
             })

@@ -5,7 +5,7 @@ import './CreateReview.css';
 const CreateReview = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://stark-sierra-80617.herokuapp.com/reviews',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

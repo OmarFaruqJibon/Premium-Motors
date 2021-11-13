@@ -11,7 +11,7 @@ const MakeAdmin = () => {
     console.log(email);
     const handleAdminForm = e =>{
         const user = {email};
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://stark-sierra-80617.herokuapp.com/users/admin',{
             method: 'PUT',
             headers: {
                 // 'authorization' : `Bearer ${token}`,
