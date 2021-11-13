@@ -3,9 +3,11 @@ import './App.css';
 import AboutUs from './pages/AboutUs/AboutUs';
 import CarDetails from './pages/Cars/CarDetails/CarDetails';
 import Cars from './pages/Cars/Cars';
+import ContactUs from './pages/ContactUs/ContactUs';
 import AuthProvider from './pages/context/AuthProvider/AuthProvider';
 import MainDashboard from './pages/Dashboard/MainDashboard/MainDashboard';
 import Sidebar from './pages/Dashboard/Sidebar/Sidebar';
+import Footer from './pages/Footer/Footer';
 import Home from './pages/Home/Home/Home';
 import Navigation from './pages/Home/Navigation/Navigation';
 import Login from './pages/Login/Login/Login';
@@ -28,30 +30,42 @@ function App() {
         <Route path="/cars">
           <Navigation></Navigation>
           <Cars></Cars>
+          <Footer></Footer>
         </Route>
         <PrivateRoute path="/dashboard">
         <Navigation></Navigation>
           <MainDashboard></MainDashboard>
+          <Footer></Footer>
         </PrivateRoute>
         <Route path="/carDetails/:carId">
         <Navigation></Navigation>
           <CarDetails></CarDetails>
+          <Footer></Footer>
         </Route>
         <Route path="/login">
         <Navigation></Navigation>
           <Login></Login>
+          <Footer></Footer>
         </Route>
         <Route path="/register">
         <Navigation></Navigation>
           <Register></Register>
+          <Footer></Footer>
         </Route>
         <Route path="/about">
         <Navigation></Navigation>
           <AboutUs></AboutUs>
+          <Footer></Footer>
+        </Route>
+        <Route path="/contact">
+        <Navigation></Navigation>
+          <ContactUs></ContactUs>
+          <Footer></Footer>
         </Route>
         <PrivateRoute path="/sidebar">
         <Navigation></Navigation>
           <Sidebar></Sidebar>
+          <Footer></Footer>
         </PrivateRoute>
         <Route path="*">
           <NotFound></NotFound>

@@ -4,6 +4,7 @@ import './Car.css';
 
 const Car = (props) => {
     const {_id, title, img , description, price} = props.car;
+    
     return (
         <div className="col-lg-4 col-md-6 col-12 mt-5">
             <div className="cart">

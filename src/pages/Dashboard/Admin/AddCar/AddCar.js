@@ -22,9 +22,9 @@ const AddCar = () => {
     }
 
     return (
-        <div>
-            <h2>Add a new car</h2>
-             <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="default-text mt-5">
+            <h2 className="fw-bold">Add a new car</h2>
+             <form className="input-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title")} placeholder="Title" className="p-2 m-2 w-50"/>
                 <br />
                 <input {...register("description" , { required: true })} placeholder="description" className="p-2 m-2 w-50"/>
@@ -35,7 +35,7 @@ const AddCar = () => {
                 <br />
                 {errors.exampleRequired && <span>This field is required</span>}
                 
-                <input type="submit" value="Add Car" className="btn book-btn"/>
+                <input type="submit" value="Add Car" className="btn review-btn"/>
             </form>
         </div>
     );

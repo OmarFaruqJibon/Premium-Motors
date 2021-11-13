@@ -40,7 +40,7 @@ const MyOrders = () => {
     }
 
     return (
-        <div>
+        <div className="default-text">
            <h4 className="fw-bold mt-4 mb-5"> My Orders </h4>
 
            <div className="m-md-4">

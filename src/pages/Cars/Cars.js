@@ -11,9 +11,9 @@ const Cars = () => {
     },[]);
     return (
         <div>
-        <div className="text-center">
-            <h1 className="coutses-title mb-3">New Cars <span>Packages</span></h1>
-            <p><small>Travel has helped us to understand the meaning of life and it has helped us become better people. <br /> Each time we travel, we see the world with new eyes.</small></p>
+        <div className="text-center mt-5">
+            <h1 className="fw-bolder">Feature<span className="def-clr">Cars</span></h1>
+            <p><small>Travel has helped us to understand the meaning of life and it has helped us become better people <br /> Each time we travel, we see the world with new eyes</small></p>
         </div>
 
         <div className="row g-4 m-5 mt-0">

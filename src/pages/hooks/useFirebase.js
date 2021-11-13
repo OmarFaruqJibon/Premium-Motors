@@ -9,7 +9,6 @@ const useFirebase = () => {
     const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [admin, setAdmin] = useState(false);
-    // const [token, setToken] = useState('');
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -74,10 +73,6 @@ const useFirebase = () => {
         const unsubscribe =  onAuthStateChanged(auth, (user) => {
               if (user) {
                   setUser(user);
-                //   getIdToken(user)
-                //   .then(idToken=>{
-                //       setToken(idToken)
-                //   })
               } else {
                   setUser({});
               }

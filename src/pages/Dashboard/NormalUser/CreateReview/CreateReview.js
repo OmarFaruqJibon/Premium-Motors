@@ -23,7 +23,7 @@ const CreateReview = () => {
     }
 
     return (
-        <div>
+        <div className="mb-5">
             <h2 className="mt-5">Please give us a review</h2>
             <form className="input-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")} placeholder="Name" className="p-2 m-2 w-50"/>

@@ -12,8 +12,6 @@ const HomeCars = () => {
 
     // slice courses array to 4 elements
     const sixItems = cars.slice(0, 6);
-    console.log(sixItems)
-    // const {_id, title, img , description, price} = sixItems;
     
     return (
         <div>
@@ -23,7 +21,7 @@ const HomeCars = () => {
         </div>
 
         <div className="row g-4 m-5 mt-0">
-            {sixItems.map(car => <div className="col-lg-4 col-md-6 col-12 mt-5">
+            {sixItems.map(car => <div key={car._id} className="col-lg-4 col-md-6 col-12 mt-5">
                 <div className="cart">
                     <div className="thumb">
                         <img src={car.img} alt="" />

@@ -16,12 +16,10 @@ const CarDetails = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
             setCar(data);
         })
     },[]);
 
-    
     const onSubmit = data =>{
         data.bookingID = carId;
         fetch('https://stark-sierra-80617.herokuapp.com/orders',{
@@ -33,7 +31,6 @@ const CarDetails = () => {
         })
         .then(res=>res.json())
         .then(result=>{
-            console.log(result);
             if(result.insertedId){
                 alert('Booking Successfully.');
                 reset();
@@ -45,11 +42,11 @@ const CarDetails = () => {
         <div className="container">
             <div>
                 <h2 className=" fw-bold mt-5 mb-4">Car Booking</h2>
-                <div className="row g-md-5">
+                <div className="row g-md-5 mt-3">
                     <div className="col-md-6 col-12 p-3">
                         <img className="w-100" src={img} alt="" />
                     </div>
-                    <div className="col-md-6 col-12 p-3">
+                    <div className="col-md-6 col-12 p-3 text-start">
                         <h5><strong>{title}</strong></h5>
                         <p><small><strong>About Car:</strong> {description}</small></p>
                         <h5><strong>$ {price}</strong> </h5>
@@ -59,7 +56,7 @@ const CarDetails = () => {
 
             <div className="container mb-5 text-center mt-5">
             <h5 className=" fw-bold mt-5 mb-4">Your Personal Information</h5>
-            <form className="" onSubmit={handleSubmit(onSubmit)}>
+            <form className="input-form" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("UserName")} defaultValue={user.displayName} className="p-2 m-2 w-50"/>
                 <br />
                 <input {...register("email" , { required: true })} defaultValue={user.email}  className="p-2 m-2 w-50"/>
@@ -71,7 +68,7 @@ const CarDetails = () => {
                 
                 {errors.exampleRequired && <span>This field is required</span>}
                 
-                <input type="submit" value="Purches" className="btn book-btn"/>
+                <input type="submit" value="Purches" className="btn review-btn"/>
             </form>
         </div>
 

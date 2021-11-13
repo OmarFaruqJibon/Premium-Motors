@@ -29,15 +29,15 @@ const Register = () => {
 
     return (
         <div>
-           <div className="row container">
+           <div className="row container mb-5">
                <div className="col-md-6 col-12">
-                   <h2 className="text-center mt-5">Register</h2>
-                   <form className="text-center mt-5" onSubmit={handleForm}>
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="text" name="name" placeholder="Name" />
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="email" name="email" placeholder="Email" />
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="password" name="password" placeholder="Password" />
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="password" name="password2" placeholder="Confirm Password" />
-                       <button type="submit" className="w-75 mt-4">Register</button>
+                   <h2 className="text-center mt-5 fw-bold">Registration</h2>
+                   <form className="text-center mt-5 input-form" onSubmit={handleForm}>
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="text" name="name" placeholder="Name" />
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="email" name="email" placeholder="Email" />
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="password" name="password" placeholder="Password" />
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="password" name="password2" placeholder="Confirm Password" />
+                       <button type="submit" className="w-75 mt-4 btn btn-primary mb-2">Register</button>
                    </form>
                    <p>Already Registerd? <Link to="/login">Login</Link> </p>
                    {

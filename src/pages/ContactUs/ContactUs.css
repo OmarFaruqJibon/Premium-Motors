@@ -1,0 +1,21 @@
+.contact-icon {
+    font-size: 65px;
+    color:#ef6c00;
+}
+
+.contact-info{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-input-field input{
+    width: 70%;
+    
+}
+.contact-input-field input{
+    /* width: 50%; */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background-color: rgb(207, 207, 207);
+    border: none;
+}

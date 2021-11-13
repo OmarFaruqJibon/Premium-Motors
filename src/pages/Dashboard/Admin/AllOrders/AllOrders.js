@@ -9,7 +9,6 @@ const AllOrders = () => {
         .then(res=> res.json())
         .then(data=>setOrders(data));
     },[]);
-    console.log(orders);
 
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
@@ -26,10 +25,9 @@ const AllOrders = () => {
         })
         }
     }
-
     return (
         <div>
-           <h4 className="fw-bold mt-4 mb-5"> All Orders </h4>
+           <h2 className="fw-bold mt-4 mb-5"> All Orders </h2>
 
            <div className="m-md-4">
                 <div className="row g-4">

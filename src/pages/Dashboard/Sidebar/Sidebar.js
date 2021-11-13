@@ -4,8 +4,6 @@ import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import { IconContext } from 'react-icons';
-// import { IconName } from "react-icons/ai";
-
 import {
     Switch,
     Route,
@@ -26,9 +24,7 @@ const Sidebar = () => {
     const showSidebar = () => setSidebar(!sidebar);
     const {admin, logOut} = useAuth();
     let { path, url } = useRouteMatch();
-
     
-  
     return (
       <>
         <div>
@@ -74,7 +70,7 @@ const Sidebar = () => {
 
             <Switch>
                     <Route exact path={path}>
-                        <h3>Please select a topic.</h3>
+                        <h3 className="default-text mt-5">Please select a topic.</h3>
                     </Route>
                     <AdminRoute path={`${path}/addCar`}>
                         <AddCar></AddCar>

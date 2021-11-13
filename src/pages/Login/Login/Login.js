@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link , useLocation , useHistory} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 const Login = () => {
-    const {user, authError, userLogin, googleLogin, isLoading} = useAuth();
+    const {userLogin, googleLogin} = useAuth();
     const [loginData, setLoginData] = useState({});
 
     const location = useLocation();
@@ -15,7 +15,6 @@ const Login = () => {
         const newLoginData = {...loginData};
         newLoginData[field] = value;
         setLoginData(newLoginData);
-        console.log(loginData);
     }
 
     const handleForm = e => {
@@ -30,17 +29,17 @@ const Login = () => {
 
     return (
        <div>
-           <div className="row container">
+           <div className="row container mb-5">
                <div className="col-md-6 col-12">
-                   <h2 className="text-center mt-5">Login</h2>
-                   <form className="text-center mt-5" onSubmit={handleForm}>
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="email" name="email" placeholder="Email" />
-                       <input onBlur={handleLogInField} className="w-75 mt-2" type="password" name="password" placeholder="Password" />
-                       <button type="submit" className="w-75 mt-2">Login</button>
+                   <h2 className="text-center mt-5 fw-bold">Login</h2>
+                   <form className="text-center mt-5 input-form" onSubmit={handleForm}>
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="email" name="email" placeholder="Email" />
+                       <input onBlur={handleLogInField} className="w-75 mt-4" type="password" name="password" placeholder="Password" />
+                       <button type="submit" className="w-75 mt-4 mb-2 btn btn-primary">Login</button>
                    </form>
                    <p>New User? <Link to="/register">Register</Link> </p>
                    <p>----------OR----------</p>
-                   <button onClick={handleGoogleLogin} type="submit" className="w-75 mt-2">Login with google</button>
+                   <button onClick={handleGoogleLogin} type="submit" className="w-75 mt-2 btn btn-primary">Login with google</button>
                </div>
                <div className="col-md-6 col-12">
                     <img className="w-100 mt-5" src={'https://i.postimg.cc/hvS3Psfy/signin-11.png'} alt="" />

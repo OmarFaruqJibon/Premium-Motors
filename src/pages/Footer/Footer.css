@@ -1,5 +1,5 @@
 .footer-container{
-    background-color: #000000f5;
+    background-color: #151515;
     padding: 10px;
     height: auto;
 }
@@ -31,7 +31,7 @@
     border-bottom: 1px solid rgb(153, 153, 153);
 }
 .footer-nav-item{
-    color: #ef6c00;
+    color: #db2d2e;
     font-weight: 700;
     padding-bottom: 5px;
     text-decoration: none;
@@ -50,7 +50,7 @@
     width: 295px;
 }
 .footer-input button{
-    background-color: #ef6c00;
+    background-color: #db2d2e;
     color: #fff;
     border: none;
     padding: 11px 27px;

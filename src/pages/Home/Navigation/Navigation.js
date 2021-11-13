@@ -19,15 +19,14 @@ const Navigation = () => {
                     </button>
 
                     <div className="text-md-start">
-                        <Link to="/"><img className=" w-50" src={'https://i.postimg.cc/RZJ337xN/logo.png'} alt="" /></Link>
+                        <Link to="/"><img className=" w-50" src={'https://i.postimg.cc/X7hWBdmq/730-ai-2.png'} alt="" /></Link>
                         
                     </div>
                     <div className=" collapse navbar-collapse text-md-start" id="navbarText">
                         <div className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <Link className="nav-item my-nav mt-4 mt-lg-0 mb-2 mb-md-0" to="/home">Home</Link>
                                 <Link className="nav-item my-nav mb-2 mb-md-0" to="/cars">Cars</Link>
-                                {/* <Lin className="nav-item my-nav" to="/dashboard">Dashboard</Lin> */}
-                                <Link className="nav-item my-nav mb-2 mb-md-0" to="/sidebar">Sidebar</Link>
+                                <Link className="nav-item my-nav mb-2 mb-md-0" to="/sidebar">Dashboard</Link>
                                 <Link className="nav-item my-nav" to="/about">About</Link>
                                 <Link className="nav-item my-nav" to="/contact">Contact</Link>
                         </div>

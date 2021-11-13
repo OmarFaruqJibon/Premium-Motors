@@ -25,8 +25,8 @@ const MakeAdmin = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h2 className="mt-5">Add an Admin</h2>
+        <div className="default-text">
+            <h2 className="mt-5 fw-bold">Add an Admin</h2>
                
                 <form onSubmit={handleAdminForm}>
                     <div className="input-group m-0 m-auto mt-5 w-50 mb-3">

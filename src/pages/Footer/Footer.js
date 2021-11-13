@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="row g-0">
                 <div className="col-md-4 col-12 footer-left">
                         <div className="footer-logo">
-                            <img src={'https://i.postimg.cc/6QSXSR87/logo.png'} alt="" />
+                            <img src={'https://i.postimg.cc/X7hWBdmq/730-ai-2.png'} alt="" />
                         </div>
                         <div className="social-icons">
                             <a target="blank" href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
