@@ -6,7 +6,7 @@ const HomeTop = () => {
         <div className="container">
             <div className="home-top-header">
                 <p>HELPS YOU TO FIND YOUR NEXT CAR EASILY</p>
-                <h1 className="fw-bolder">Welcome to<span className="def-clr">Premium Cars</span> </h1>
+                <h1 className="fw-bolder">Welcome to <span className="def-clr">Premium Cars</span> </h1>
             </div>
 
             <div className="home-top">

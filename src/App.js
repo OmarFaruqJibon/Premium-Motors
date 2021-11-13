@@ -37,11 +37,11 @@ function App() {
           <MainDashboard></MainDashboard>
           <Footer></Footer>
         </PrivateRoute>
-        <Route path="/carDetails/:carId">
+        <PrivateRoute path="/carDetails/:carId">
         <Navigation></Navigation>
           <CarDetails></CarDetails>
           <Footer></Footer>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
         <Navigation></Navigation>
           <Login></Login>

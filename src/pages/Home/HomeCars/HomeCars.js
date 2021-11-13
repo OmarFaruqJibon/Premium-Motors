@@ -16,7 +16,7 @@ const HomeCars = () => {
     return (
         <div>
         <div className="text-center">
-            <h1 className="fw-bolder">Feature<span className="def-clr">Cars</span></h1>
+            <h1 className="fw-bolder">Feature <span className="def-clr">Cars</span></h1>
             <p><small>Travel has helped us to understand the meaning of life and it has helped us become better people <br /> Each time we travel, we see the world with new eyes</small></p>
         </div>
 
