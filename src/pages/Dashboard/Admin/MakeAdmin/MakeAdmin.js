@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
-    // const {token} = useAuth();
     const [email, setEmail] = useState('');
     
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
-    console.log(email);
     const handleAdminForm = e =>{
         const user = {email};
         fetch('https://stark-sierra-80617.herokuapp.com/users/admin',{
             method: 'PUT',
             headers: {
-                // 'authorization' : `Bearer ${token}`,
                 'content-type' : 'application/json'
             },
             body: JSON.stringify(user)
@@ -22,6 +18,9 @@ const MakeAdmin = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+            if(data?.modifiedCount>0){
+                alert('Admin create successfully');
+            }
         })
         e.preventDefault();
     }

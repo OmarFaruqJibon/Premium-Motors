@@ -5,7 +5,9 @@
 .my-nav{
     padding-right: 20px;
 }
-
+.nav-span{
+    margin-left:0;
+}
 .my-nav{
     color: #fff;
     text-decoration: none;

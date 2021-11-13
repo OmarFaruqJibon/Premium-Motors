@@ -19,12 +19,15 @@ import Pay from '../NormalUser/Pay/Pay';
 import MyOrders from '../NormalUser/MyOrders/MyOrders';
 import CreateReview from '../NormalUser/CreateReview/CreateReview';
 import ManageCars from '../Admin/ManageCars/ManageCars';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
     const {admin, logOut} = useAuth();
     let { path, url } = useRouteMatch();
+
+    
   
     return (
       <>
@@ -50,7 +53,7 @@ const Sidebar = () => {
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/addCar`}><AiIcons.AiFillCarryOut className="me-2 fs-4" /> Add Car</Link> <br />
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/allOrders`}><AiIcons.AiFillShopping className="me-2 fs-4" />All Orders</Link> <br />
                             <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/makeAdmin`}><AiIcons.AiFillContacts className="me-2 fs-4" />Make Admin</Link> <br />
-                            <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/manageCars`}><AiIcons.AiFillContacts className="me-2 fs-4" />Manage Cars</Link> <br />
+                            <Link className="me-3 nav-text text-decoration-none fw-bold" to={`${url}/manageCars`}><AiIcons.AiFillCloseCircle className="me-2 fs-4" />Manage Cars</Link> <br />
                         </div>}
 
                         {!admin && <div>
@@ -73,15 +76,15 @@ const Sidebar = () => {
                     <Route exact path={path}>
                         <h3>Please select a topic.</h3>
                     </Route>
-                    <Route path={`${path}/addCar`}>
+                    <AdminRoute path={`${path}/addCar`}>
                         <AddCar></AddCar>
-                    </Route>
-                    <Route path={`${path}/allOrders`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/allOrders`}>
                         <AllOrders></AllOrders>
-                    </Route>
-                    <Route path={`${path}/makeAdmin`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
-                    </Route>
+                    </AdminRoute>
                     <Route path={`${path}/pay`}>
                         <Pay></Pay>
                     </Route>
@@ -91,9 +94,9 @@ const Sidebar = () => {
                     <Route path={`${path}/createReview`}>
                         <CreateReview></CreateReview>
                     </Route>
-                    <Route path={`${path}/manageCars`}>
+                    <AdminRoute path={`${path}/manageCars`}>
                         <ManageCars></ManageCars>
-                    </Route>
+                    </AdminRoute>
                 </Switch>
         </div>
       </>

@@ -16,6 +16,7 @@ import Navigation from './pages/Home/Navigation/Navigation';
 import Login from './pages/Login/Login/Login';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Login/Register/Register';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -60,7 +61,7 @@ function App() {
 
 
 
-        <Route path="/addCar">
+        {/* <Route path="/addCar">
         <Navigation></Navigation>
           <AddCar></AddCar>
         </Route>
@@ -83,11 +84,19 @@ function App() {
         <Route path="/createReview">
         <Navigation></Navigation>
           <CreateReview></CreateReview>
-        </Route>
+        </Route> */}
+
         <PrivateRoute path="/sidebar">
         <Navigation></Navigation>
           <Sidebar></Sidebar>
         </PrivateRoute>
+
+
+
+
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
         
       </Switch>
     </BrowserRouter>
