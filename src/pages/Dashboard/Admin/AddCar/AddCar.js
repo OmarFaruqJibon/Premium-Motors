@@ -5,7 +5,7 @@ import './AddCar.css';
 const AddCar = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data =>{
-        fetch('https://stark-sierra-80617.herokuapp.com/cars',{
+        fetch('https://premium-motors-server.onrender.com/cars',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     }
     const handleAdminForm = e =>{
         const user = {email};
-        fetch('https://stark-sierra-80617.herokuapp.com/users/admin',{
+        fetch('https://premium-motors-server.onrender.com/users/admin',{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

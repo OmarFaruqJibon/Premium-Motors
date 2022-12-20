@@ -11,7 +11,7 @@ const CarDetails = () => {
     const { register,reset, handleSubmit, formState: { errors } } = useForm();
 
 
-    const url = `https://stark-sierra-80617.herokuapp.com/carDetails/${carId}`;
+    const url = `https://premium-motors-server.onrender.com/carDetails/${carId}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -22,7 +22,7 @@ const CarDetails = () => {
 
     const onSubmit = data =>{
         data.bookingID = carId;
-        fetch('https://stark-sierra-80617.herokuapp.com/orders',{
+        fetch('https://premium-motors-server.onrender.com/orders',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

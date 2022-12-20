@@ -5,7 +5,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(()=>{
-        fetch('https://stark-sierra-80617.herokuapp.com/orders')
+        fetch('https://premium-motors-server.onrender.com/orders')
         .then(res=> res.json())
         .then(data=>setOrders(data));
     },[]);
@@ -13,7 +13,7 @@ const AllOrders = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
-            const url = `https://stark-sierra-80617.herokuapp.com/orders/${id}`;
+            const url = `https://premium-motors-server.onrender.com/orders/${id}`;
         fetch((url),{
             method: 'DELETE',
         })

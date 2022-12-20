@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const HomeCars = () => {
     const [cars, setCars] = useState([]);
     useEffect( () => {
-        fetch('https://stark-sierra-80617.herokuapp.com/cars')
+        fetch('https://premium-motors-server.onrender.com/cars')
         .then(res=>res.json())
         .then(data=>setCars(data));
     },[]);
